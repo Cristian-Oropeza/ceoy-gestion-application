@@ -11,7 +11,7 @@ jobs:
     runs-on: ubutu-latest
     steps:
       - name: Descargar Código
-        uses: actions/checkout@4
+        uses: actions/checkout@v4
 
       - name: Configurar Python
         uses: actions/setup-python@v5
