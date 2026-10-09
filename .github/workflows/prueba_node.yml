@@ -1,0 +1,25 @@
+name: Pruebas Node
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  testear-codigo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar Código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+
+      - name: Instalar las dependencias
+        run: npm install
+
+      - name: Ejecutar Pruebas
+        run: npm test
